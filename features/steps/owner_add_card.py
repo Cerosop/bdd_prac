@@ -52,9 +52,9 @@ def step_impl(context):
 def step_impl(context):
     context.game.player_cards.append("Q spade")
 
-@given('owner5 has 1 dark card is 7 heart')
+@given('owner5 has 1 dark card is 8 heart')
 def step_impl(context):
-    context.game.owner_cards.append("7 heart")
+    context.game.owner_cards.append("8 heart")
 
 @given('player5 has 2 open card is 2 diamond and 2 heart')
 def step_impl(context):
@@ -73,9 +73,9 @@ def step_impl(context):
 def step_impl(context):
     assert context.game.player_point == 14
 
-@then('owner5 card point is 17')
+@then('owner5 card point is 18')
 def step_impl(context):
-    assert context.game.owner_point == 17
+    assert context.game.owner_point == 18
 
 @then('player5 loses')
 def step_impl(context):

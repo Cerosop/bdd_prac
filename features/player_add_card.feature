@@ -8,7 +8,7 @@ Feature: player add card
 		And owner2 has 1 open card is K club
 		And next2 card is <next_card>
 		When player2 choose to add card 
-		Then print2 player card point is <player_point>
+		Then player2 card point is <player_point>
 
         Examples:
             | next_card | player_point |
@@ -27,6 +27,7 @@ Feature: player add card
 
 	
 	Scenario Outline: ask player
+		Given player name is Amy3
 		When player reply <reply>
 		Then reply should be <reply_bool>
 

@@ -28,7 +28,7 @@ def step_impl(context, next_card):
 
 @when('player2 choose to add card')
 def step_impl(context):
-    context.game.player_add_card_phase()
+    context.game.player_add_card_phase(True)
 
 @then('player2 card point is {player_point: d}')
 def step_impl(context, player_point):
@@ -64,6 +64,10 @@ def step_impl(context):
 def step_impl(context):
     assert context.game.player_point == 20
 
+@given('player name is Amy3')
+def step_impl(context):
+    context.game = Game()
+    context.game.set_player_name('Amy')
 
 @when('player reply {reply}')
 def step_impl(context, reply):

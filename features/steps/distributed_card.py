@@ -20,7 +20,7 @@ def step_impl(context):
 def step_impl(context):
     context.game.distribute_card()
 
-@then('player has 1 dark card is A spade, 1 open card is J diamond')
+@then('player has 1 dark card is A spade, player has 1 open card is J diamond')
 def step_impl(context):
     assert context.game.player_cards == ['A spade', 'J diamond']
 

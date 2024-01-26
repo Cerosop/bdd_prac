@@ -15,19 +15,19 @@ Feature: owner add card
         Examples:
             | next_card | owner_point | game_result |
             | 4 spade          | 21             |     player loses      |
-            | 3 heart        | 20             |     draws     |
+            | 3 heart        | 20             |     draw     |
             | 5 heart        | 22             |     player wins     |
 
 
     Scenario: owner5 win without draw
 		Given player5 name is Amy
         And player5 has 1 dark card is Q spade
-		And owner5 has 1 dark card is 7 heart
+		And owner5 has 1 dark card is 8 heart
 		And player5 has 2 open card is 2 diamond and 2 heart
 		And owner5 has 1 open card is K club
 		When open5 dark card
         Then player5 card point is 14
-		But owner5 card point is 17
+		But owner5 card point is 18
         But player5 loses
 
 
